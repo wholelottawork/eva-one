@@ -245,7 +245,7 @@ export default function HeaderBar({
                 className="w-px h-6 shrink-0"
                 style={{
                   background:
-                    'linear-gradient(180deg, transparent 0%, rgba(61,107,255,0.45) 26%, rgba(61,107,255,0.45) 74%, transparent 100%)',
+                    'linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.12) 26%, rgba(255,255,255,0.12) 74%, transparent 100%)',
                 }}
               />
 
@@ -325,7 +325,7 @@ export default function HeaderBar({
                     <a
                       href="/login"
                       onClick={(e) => spaGo(e, '/login')}
-                      className="gl-text-link px-3 py-2 text-sm font-medium"
+                      className="gl-text-link px-4 py-2 text-sm font-medium rounded-lg"
                     >
                       {t('signIn', language)}
                     </a>
@@ -333,7 +333,7 @@ export default function HeaderBar({
                       <a
                         href="/register"
                         onClick={(e) => spaGo(e, '/register')}
-                        className="gl-navbar-btn px-5 py-2 rounded-full font-semibold text-sm"
+                        className="gl-navbar-btn px-4 py-2 rounded-lg font-medium text-sm"
                       >
                         {t('signUp', language)}
                       </a>

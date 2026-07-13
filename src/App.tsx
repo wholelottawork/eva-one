@@ -176,7 +176,6 @@ function App() {
             <DataPage />
           </ErrorBoundary>
         </main>
-        <SiteFooter language={language} />
         <LoginRequiredOverlay
           isOpen={loginOverlayOpen}
           onClose={() => setLoginOverlayOpen(false)}
@@ -210,7 +209,6 @@ function App() {
             <NewsPage />
           </ErrorBoundary>
         </main>
-        <SiteFooter language={language} />
         <LoginRequiredOverlay
           isOpen={loginOverlayOpen}
           onClose={() => setLoginOverlayOpen(false)}

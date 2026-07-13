@@ -86,13 +86,7 @@ export function UpgradePage() {
 
       <main className="pt-16 relative z-10">
         <section className="relative overflow-hidden px-4 py-20 sm:py-28">
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                'radial-gradient(ellipse 50% 32% at 50% 2%, rgba(61,107,255,0.09) 0%, transparent 58%)',
-            }}
-          />
+          <div className="absolute inset-0 pointer-events-none" />
 
           <div className="max-w-6xl mx-auto relative z-10 space-y-8">
             <motion.div
@@ -123,7 +117,7 @@ export function UpgradePage() {
               transition={{ duration: 0.45, delay: 0.08 }}
               className="grid grid-cols-1 gap-6"
             >
-              <div className="rounded-[28px] p-6 sm:p-7 overflow-hidden gl-metal-panel">
+              <div className="rounded-2xl p-6 sm:p-7 overflow-hidden bg-[#0d0d0d] border border-[#1f1f1f]">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <div
@@ -132,7 +126,7 @@ export function UpgradePage() {
                     >
                       {tr('eligibility')}
                     </div>
-                    <h2 className="text-2xl font-semibold gl-metal-text">
+                    <h2 className="text-2xl font-semibold text-white">
                       {gateHeadline}
                     </h2>
                   </div>
@@ -143,7 +137,6 @@ export function UpgradePage() {
                         ? 'rgba(16,203,129,0.10)'
                         : 'rgba(255,255,255,0.035)',
                       border: `1px solid ${gate.isEligible ? 'rgba(16,203,129,0.30)' : 'rgba(255,255,255,0.10)'}`,
-                      boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
                     }}
                   >
                     <span
@@ -200,10 +193,7 @@ export function UpgradePage() {
                         width: `${progressPct}%`,
                         background: gate.isEligible
                           ? 'linear-gradient(90deg, #0ea968, #10cb81)'
-                          : 'linear-gradient(90deg, #2a54e6, #4f7bff)',
-                        boxShadow: gate.isEligible
-                          ? '0 0 12px rgba(16,203,129,0.5)'
-                          : '0 0 12px rgba(61,107,255,0.5)',
+                          : 'linear-gradient(90deg, #15803d, #10cb81)',
                       }}
                     />
                   </div>
@@ -227,11 +217,9 @@ export function UpgradePage() {
                       onClick={() => open()}
                       className="rounded-2xl px-4 py-3 text-sm font-semibold inline-flex items-center gap-2 transition-all hover:brightness-110"
                       style={{
-                        background:
-                          'linear-gradient(180deg, #4f7bff 0%, #3d6bff 100%)',
-                        color: '#fff',
-                        boxShadow:
-                          '0 4px 16px rgba(61,107,255,0.4), inset 0 1px 0 rgba(255,255,255,0.25)',
+                        background: 'rgba(255,255,255,0.05)',
+                        border: '1px solid rgba(255,255,255,0.10)',
+                        color: 'var(--text-primary)',
                       }}
                     >
                       <Wallet className="w-4 h-4" />
@@ -287,7 +275,7 @@ function MetricCard({
   compact?: boolean
 }) {
   return (
-    <div className="rounded-2xl px-4 py-3 overflow-hidden gl-onyx-panel">
+    <div className="rounded-2xl px-4 py-3 overflow-hidden bg-[#0d0d0d] border border-[#1f1f1f]">
       <div
         className="text-[11px] uppercase tracking-[0.18em]"
         style={{ color: 'var(--text-tertiary)' }}
@@ -295,7 +283,7 @@ function MetricCard({
         {label}
       </div>
       <div
-        className={`${compact ? 'text-sm' : 'text-lg'} font-semibold mt-2 break-words gl-metal-text`}
+        className={`${compact ? 'text-sm' : 'text-lg'} font-semibold mt-2 break-words text-white`}
       >
         {value}
       </div>

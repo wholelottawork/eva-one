@@ -331,7 +331,7 @@ export function AuthenticatedShell({
         </ErrorBoundary>
       </main>
 
-      {currentPage !== 'debate' && <SiteFooter language={language} />}
+      {currentPage !== 'debate' && currentPage !== 'news' && currentPage !== 'data' && <SiteFooter language={language} />}
 
       <LoginRequiredOverlay
         isOpen={loginOverlayOpen}

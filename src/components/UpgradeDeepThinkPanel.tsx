@@ -171,7 +171,7 @@ export function UpgradeDeepThinkPanel({
   }, [address, analysisReady, eligible, isConnected, language])
 
   return (
-    <div className="rounded-3xl p-5 sm:p-6 space-y-4 overflow-hidden gl-onyx-panel">
+    <div className="rounded-2xl p-5 sm:p-6 space-y-4 overflow-hidden bg-[#0d0d0d] border border-[#1f1f1f]">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div className="w-full min-w-0">
           <div className="flex items-center gap-2 mb-2">
@@ -182,7 +182,7 @@ export function UpgradeDeepThinkPanel({
               {tr('subtitle')}
             </span>
           </div>
-          <h3 className="text-lg sm:text-xl font-semibold whitespace-nowrap gl-metal-text">
+          <h3 className="text-lg sm:text-xl font-semibold whitespace-nowrap text-white">
             {tr('title')}
           </h3>
           <p
@@ -201,7 +201,6 @@ export function UpgradeDeepThinkPanel({
               ? 'rgba(16,203,129,0.10)'
               : 'rgba(255,255,255,0.035)',
             border: `1px solid ${eligible ? 'rgba(16,203,129,0.30)' : 'rgba(255,255,255,0.10)'}`,
-            boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
           }}
         >
           <span
@@ -255,7 +254,7 @@ export function UpgradeDeepThinkPanel({
             background: eligible
               ? 'rgba(61,107,255,0.12)'
               : 'rgba(255,255,255,0.04)',
-            color: eligible ? '#9fbcff' : 'var(--text-tertiary)',
+            color: eligible ? '#86efac' : 'var(--text-tertiary)',
             border: `1px solid ${eligible ? 'rgba(61,107,255,0.22)' : 'var(--panel-border)'}`,
           }}
         >
@@ -270,7 +269,7 @@ export function UpgradeDeepThinkPanel({
             background: eligible
               ? 'rgba(61,107,255,0.12)'
               : 'rgba(255,255,255,0.04)',
-            color: eligible ? '#9fbcff' : 'var(--text-tertiary)',
+            color: eligible ? '#86efac' : 'var(--text-tertiary)',
             border: `1px solid ${eligible ? 'rgba(61,107,255,0.22)' : 'var(--panel-border)'}`,
           }}
         >

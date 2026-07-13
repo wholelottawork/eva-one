@@ -24,34 +24,34 @@ import {
 const TOTAL_SUPPLY = 100_000_000_000
 
 const ALLOCATION_META = [
-  { id: 'publicSale', pct: 55, color: '#3d6bff' },
-  { id: 'treasury', pct: 20, color: '#6189ff' },
-  { id: 'liquidity', pct: 15, color: '#2a54e6' },
-  { id: 'ecosystem', pct: 10, color: '#58c7ff' },
+  { id: 'publicSale', pct: 55, color: '#00c853' },
+  { id: 'treasury', pct: 20, color: '#22c55e' },
+  { id: 'liquidity', pct: 15, color: '#15803d' },
+  { id: 'ecosystem', pct: 10, color: '#4ade80' },
 ] as const
 
 const UTILITY_META = [
   {
     id: 'governance',
-    color: '#3d6bff',
+    color: '#00c853',
     glow: 'rgba(61,107,255,0.12)',
     num: '01',
   },
   {
     id: 'feeDiscounts',
-    color: '#6189ff',
+    color: '#22c55e',
     glow: 'rgba(97,137,255,0.12)',
     num: '02',
   },
   {
     id: 'staking',
-    color: '#2a54e6',
+    color: '#15803d',
     glow: 'rgba(42,84,230,0.12)',
     num: '03',
   },
   {
     id: 'premiumAccess',
-    color: '#58c7ff',
+    color: '#4ade80',
     glow: 'rgba(88,199,255,0.12)',
     num: '04',
   },
@@ -174,13 +174,6 @@ const DonutChart = memo(DonutChartInner)
 // Premium-panel variety: four DIFFERENT variants for the key-stat cards (so the
 // animated border light travels a different way per card — no obvious pattern),
 // and an alternating top-glint / bottom-glint pair for the utility grid.
-const STAT_PANELS = [
-  'gl-metal-panel',
-  'gl-onyx-panel',
-  'gl-onyx-panel-b',
-  'gl-prism-panel',
-]
-const UTILITY_PANELS = ['gl-onyx-panel', 'gl-onyx-panel-b']
 
 // ── Page ───────────────────────────────────────────────────────────────────────
 
@@ -233,10 +226,10 @@ export function TokenomicsPage() {
     },
     {
       label: tr('stats.launchPlatform'),
-      value: 'Clanker',
+      value: 'Flap',
       sub: tr('stats.baseEcosystem'),
     },
-    { label: tr('stats.launchNetwork'), value: 'Base', sub: tr('stats.layer2') },
+    { label: tr('stats.launchNetwork'), value: 'Robinhood', sub: tr('stats.layer2') },
     { label: tr('stats.tge'), value: 'Q2 2026', sub: tr('stats.estimated') },
   ]
 
@@ -288,13 +281,7 @@ export function TokenomicsPage() {
         <section className="relative overflow-hidden px-4 py-20 sm:py-28 flex flex-col items-center text-center">
           {/* faint blue halo only — kept subtle + dark so the page reads as dark
               metal (like /data), with blue as an accent rather than a wash */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                'radial-gradient(ellipse 52% 34% at 50% 2%, rgba(61,107,255,0.09) 0%, transparent 58%)',
-            }}
-          />
+          <div className="absolute inset-0 pointer-events-none" />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -305,17 +292,16 @@ export function TokenomicsPage() {
             <span
               className="text-[11px] font-semibold uppercase tracking-[0.32em] px-3 py-1.5 rounded-full"
               style={{
-                color: '#9fbcff',
-                background: 'rgba(61,107,255,0.10)',
-                border: '1px solid rgba(61,107,255,0.22)',
-                boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06)',
+                color: 'rgba(255,255,255,0.6)',
+                background: '#1a1a1a',
+                border: '1px solid #2a2a2a',
               }}
             >
               {tr('badge')}
             </span>
 
             <h1
-              className="text-4xl sm:text-6xl font-bold tracking-tight gl-metal-shine"
+              className="text-4xl sm:text-6xl font-bold tracking-tight text-white"
               style={{ letterSpacing: '-0.035em', lineHeight: 1.05 }}
             >
               {tr('title')}
@@ -332,12 +318,8 @@ export function TokenomicsPage() {
             <div
               className="flex flex-wrap items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono max-w-full overflow-hidden"
               style={{
-                background: 'rgba(10,14,24,0.55)',
-                border: '1px solid rgba(120,150,255,0.14)',
-                borderTopColor: 'rgba(160,195,255,0.26)',
-                boxShadow:
-                  'inset 0 1px 0 rgba(255,255,255,0.05), inset 0 0 24px rgba(40,90,210,0.10), 0 8px 22px rgba(0,0,0,0.5)',
-                backdropFilter: 'blur(8px)',
+                background: '#0d0d0d',
+                border: '1px solid #1f1f1f',
               }}
             >
               <span style={{ color: 'var(--text-tertiary)' }}>{tr('contract')}</span>
@@ -357,7 +339,7 @@ export function TokenomicsPage() {
                       }
                     : {
                         background: 'rgba(61,107,255,0.12)',
-                        color: '#3d6bff',
+                        color: '#00c853',
                         border: '1px solid rgba(61,107,255,0.24)',
                       }
                 }
@@ -370,7 +352,7 @@ export function TokenomicsPage() {
                 disabled={!isEvaTokenConfigured()}
               >
                 {copied ? (
-                  <Check className="w-3.5 h-3.5" style={{ color: '#3d6bff' }} />
+                  <Check className="w-3.5 h-3.5" style={{ color: '#00c853' }} />
                 ) : (
                   <Copy
                     className="w-3.5 h-3.5"
@@ -390,12 +372,12 @@ export function TokenomicsPage() {
             transition={{ delay: 0.15, duration: 0.5 }}
             className="grid grid-cols-2 sm:grid-cols-4 gap-3"
           >
-            {stats.map((s, i) => (
+            {stats.map((s) => (
               // each card a DIFFERENT premium variant → the border light travels a
               // different way per card, so the row reads organic, not patterned
               <div
                 key={s.label}
-                className={`rounded-2xl p-5 flex flex-col gap-1 overflow-hidden ${STAT_PANELS[i]}`}
+                className="rounded-2xl p-5 flex flex-col gap-1 overflow-hidden bg-[#0d0d0d] border border-[#1f1f1f]"
               >
                 <span
                   className="text-[11px] uppercase tracking-widest font-medium"
@@ -403,7 +385,7 @@ export function TokenomicsPage() {
                 >
                   {s.label}
                 </span>
-                <span className="text-2xl font-bold gl-metal-text">
+                <span className="text-2xl font-bold text-white">
                   {s.value}
                 </span>
                 <span
@@ -423,7 +405,7 @@ export function TokenomicsPage() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-8 gl-metal-shine inline-block"
+            className="text-2xl font-bold mb-8 text-white inline-block"
             style={{ animationDelay: '-1.2s' }}
           >
             {tr('allocationTitle')}
@@ -435,7 +417,7 @@ export function TokenomicsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl overflow-hidden gl-onyx-panel p-6 sm:p-10"
+            className="rounded-2xl overflow-hidden bg-[#0d0d0d] border border-[#1f1f1f] p-6 sm:p-10"
           >
             <div
               className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
@@ -475,8 +457,7 @@ export function TokenomicsPage() {
                           className="w-2.5 h-2.5 rounded-full flex-shrink-0"
                           style={{
                             background: a.color,
-                            boxShadow: `0 0 5px ${a.color}99`,
-                          }}
+                            }}
                         />
                         <span
                           className="text-sm font-medium"
@@ -524,10 +505,9 @@ export function TokenomicsPage() {
                       <span
                         className="inline-block text-[11px] px-2.5 py-1 rounded-lg"
                         style={{
-                          background: 'rgba(10,14,24,0.9)',
-                          border: '1px solid rgba(120,150,255,0.18)',
+                          background: '#0d0d0d',
+                          border: '1px solid #1f1f1f',
                           color: 'var(--text-secondary)',
-                          boxShadow: '0 2px 10px rgba(0,0,0,0.5)',
                         }}
                       >
                         {a.desc}
@@ -546,7 +526,7 @@ export function TokenomicsPage() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-8 gl-metal-shine inline-block"
+            className="text-2xl font-bold mb-8 text-white inline-block"
             style={{ animationDelay: '-2.4s' }}
           >
             {tr('vestingTitle')}
@@ -556,7 +536,7 @@ export function TokenomicsPage() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden gl-prism-panel"
+            className="rounded-2xl overflow-hidden bg-[#0d0d0d] border border-[#1f1f1f]"
           >
             {/* Desktop table */}
             <table className="hidden sm:table w-full text-sm">
@@ -588,7 +568,7 @@ export function TokenomicsPage() {
                       }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.background =
-                          'rgba(70,100,180,0.10)')
+                          'rgba(255,255,255,0.04)')
                       }
                       onMouseLeave={(e) =>
                         (e.currentTarget.style.background = 'transparent')
@@ -600,8 +580,7 @@ export function TokenomicsPage() {
                             className="w-2 h-2 rounded-full flex-shrink-0"
                             style={{
                               background: alloc?.color ?? '#888',
-                              boxShadow: `0 0 7px ${alloc?.color ?? '#888'}`,
-                            }}
+                                  }}
                           />
                           <span style={{ color: 'var(--text-primary)' }}>
                             {row.category}
@@ -628,7 +607,7 @@ export function TokenomicsPage() {
                               row.tge === '100%'
                                 ? 'rgba(61,107,255,0.14)'
                                 : 'rgba(88,199,255,0.12)',
-                            color: row.tge === '100%' ? '#6189ff' : '#58c7ff',
+                            color: row.tge === '100%' ? '#22c55e' : '#4ade80',
                           }}
                         >
                           {row.tge}
@@ -655,8 +634,7 @@ export function TokenomicsPage() {
                           className="w-2 h-2 rounded-full flex-shrink-0"
                           style={{
                             background: alloc?.color ?? '#888',
-                            boxShadow: `0 0 7px ${alloc?.color ?? '#888'}`,
-                          }}
+                              }}
                         />
                         <span
                           className="text-sm font-medium"
@@ -672,7 +650,7 @@ export function TokenomicsPage() {
                             row.tge === '100%'
                               ? 'rgba(61,107,255,0.14)'
                               : 'rgba(88,199,255,0.12)',
-                          color: row.tge === '100%' ? '#6189ff' : '#58c7ff',
+                          color: row.tge === '100%' ? '#22c55e' : '#4ade80',
                         }}
                       >
                         {row.tge}
@@ -708,7 +686,7 @@ export function TokenomicsPage() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-8 gl-metal-shine inline-block"
+            className="text-2xl font-bold mb-8 text-white inline-block"
             style={{ animationDelay: '-3.6s' }}
           >
             {tr('utilityTitle')}
@@ -722,26 +700,17 @@ export function TokenomicsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07, duration: 0.4 }}
-                className={`group relative rounded-2xl p-5 flex flex-col gap-4 overflow-hidden ${UTILITY_PANELS[i % 2]}`}
-                whileHover={{ y: -3 }}
+                className="rounded-2xl p-5 flex flex-col gap-4 overflow-hidden bg-[#0d0d0d] border border-[#1f1f1f]"
               >
-                {/* per-utility colored bloom on hover (rides on top of the onyx glow) */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"
-                  style={{
-                    background: `radial-gradient(ellipse 100% 70% at 50% 0%, ${u.glow} 0%, transparent 70%)`,
-                  }}
-                />
 
                 {/* Number + icon row */}
                 <div className="relative flex items-start justify-between">
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center"
                     style={{
-                      background: `linear-gradient(180deg, ${u.glow}, rgba(0,0,0,0))`,
+                      background: '#1a1a1a',
                       color: u.color,
-                      border: `1px solid ${u.color}33`,
-                      boxShadow: `inset 0 1px 0 rgba(255,255,255,0.08), 0 0 14px ${u.glow}`,
+                      border: '1px solid rgba(255,255,255,0.07)',
                     }}
                   >
                     {u.icon}
@@ -759,10 +728,7 @@ export function TokenomicsPage() {
                   <div className="flex items-center gap-2">
                     <div
                       className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{
-                        background: u.color,
-                        boxShadow: `0 0 6px ${u.color}`,
-                      }}
+                      style={{ background: u.color }}
                     />
                     <h3
                       className="font-semibold text-[15px]"
@@ -789,7 +755,7 @@ export function TokenomicsPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-3xl overflow-hidden gl-onyx-panel-b p-7 sm:p-10 flex flex-col items-center sm:flex-row sm:justify-between gap-5 text-center sm:text-left"
+            className="rounded-2xl overflow-hidden bg-[#0d0d0d] border border-[#1f1f1f] p-7 sm:p-10 flex flex-col items-center sm:flex-row sm:justify-between gap-5 text-center sm:text-left"
           >
             <div>
               <h2
@@ -844,11 +810,9 @@ export function TokenomicsPage() {
                 onClick={() => navigate('/docs')}
                 className="flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:brightness-110 whitespace-nowrap"
                 style={{
-                  background:
-                    'linear-gradient(180deg, #4f7bff 0%, #3d6bff 100%)',
-                  color: '#fff',
-                  boxShadow:
-                    '0 4px 16px rgba(61,107,255,0.4), inset 0 1px 0 rgba(255,255,255,0.25)',
+                  background: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.10)',
+                  color: 'var(--text-primary)',
                 }}
               >
                 {tr('cta.learnMore')}

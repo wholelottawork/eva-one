@@ -937,7 +937,7 @@ export function LandingPage() {
       {/* Shared background — super-black */}
       <div
         className="fixed inset-0 pointer-events-none"
-        style={{ background: '#050505' }}
+        style={{ background: '#000000' }}
       />
 
       {/* ── IDLE: ghostlink noir terminal ── */}
@@ -970,7 +970,7 @@ export function LandingPage() {
                 <div
                   className="absolute inset-0"
                   style={{
-                    filter: 'hue-rotate(-56deg) saturate(1.25) brightness(1.0)',
+                    filter: 'hue-rotate(-150deg) saturate(1.4) brightness(1.0)',
                   }}
                 >
                   <DarkVeil
@@ -982,9 +982,6 @@ export function LandingPage() {
                     paused={inputFocused}
                   />
                 </div>
-                {/* Light vignette — keep the (now DARK-BLUE, via the hue-rotate
-                    above) veil bright/prominent at the top and only darken toward
-                    the bottom edge so the centered hero text stays legible. */}
                 <div
                   className="absolute inset-0"
                   style={{
@@ -1102,9 +1099,7 @@ export function LandingPage() {
                           ? '1px solid var(--accent-primary-border-strong)'
                           : 'none',
                         color: input.trim() ? '#fff' : 'rgba(255,255,255,0.7)',
-                        boxShadow: input.trim()
-                          ? '0 0 22px rgba(61,107,255,0.45)'
-                          : 'none',
+                        boxShadow: 'none',
                       }}
                       aria-label={
                         input.trim() ? tr('send') : tr('commandsAria')
@@ -1193,7 +1188,7 @@ export function LandingPage() {
                       <span className="flex-1">{tr('contacts')}</span>
                       <span
                         className="text-[10px] font-mono font-black"
-                        style={{ color: 'rgba(135,160,255,0.7)' }}
+                        style={{ color: 'rgba(255,255,255,0.7)' }}
                       >
                         /addr
                       </span>
@@ -1224,7 +1219,7 @@ export function LandingPage() {
                         <span className="flex-1">{cmd.label}</span>
                         <span
                           className="text-[10px] font-mono font-black"
-                          style={{ color: 'rgba(135,160,255,0.7)' }}
+                          style={{ color: 'rgba(255,255,255,0.7)' }}
                         >
                           {cmd.hint}
                         </span>
@@ -1527,7 +1522,7 @@ export function LandingPage() {
                       <span
                         key={`chat-letter-${letter}-${index}`}
                         className="hero-logo-letter"
-                        style={{ animationDelay: `${index * 0.12}s` }}
+                        style={{ animationDelay: `${index * 0.12}s`, background: 'none', WebkitTextFillColor: '#ffffff', color: '#ffffff' }}
                       >
                         {letter}
                       </span>
