@@ -1,5 +1,5 @@
 /** EVA → Reown AppKit theme (dark metal + electric blue). Single source of truth. */
-export const EVA_APPKIT_ACCENT = '#3d6bff'
+export const EVA_APPKIT_ACCENT = '#00c853'
 export const EVA_APPKIT_BG = '#050505'
 export const EVA_APPKIT_SURFACE = '#0c0d12'
 export const EVA_APPKIT_SURFACE_HIGH = '#15171f'

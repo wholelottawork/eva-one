@@ -161,7 +161,7 @@ const buildPalette = (colors: string[]): number[][] => {
 }
 
 export default function Strands({
-  colors = ['#1d3fd1', '#ffffff', '#8b3dff'],
+  colors = ['#166534', '#ffffff', '#8b3dff'],
   count = 5,
   speed = 0.28,
   amplitude = 1.15,

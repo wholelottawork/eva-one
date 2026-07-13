@@ -278,7 +278,7 @@ export function SettingsModal({
                         style={{
                           background: 'rgba(61,107,255,0.08)',
                           border: '1px solid rgba(61,107,255,0.2)',
-                          color: '#3d6bff',
+                          color: '#00c853',
                         }}
                       >
                         {otpSecret}
@@ -295,7 +295,7 @@ export function SettingsModal({
                         {copied ? (
                           <Check
                             className="w-3.5 h-3.5"
-                            style={{ color: '#3d6bff' }}
+                            style={{ color: '#00c853' }}
                           />
                         ) : (
                           <Copy className="w-3.5 h-3.5" />

@@ -60,12 +60,6 @@ function GroupMenu({
         aria-expanded={open}
         onClick={() => setOpen((o) => !o)}
       >
-        <HugeiconsIcon
-          icon={group.icon}
-          size={17}
-          strokeWidth={1.8}
-          className="gl-nav-ico"
-        />
         <span>{isEn ? group.label : group.zh}</span>
         <HugeiconsIcon
           icon={CHEVRON_ICON}
@@ -114,12 +108,6 @@ function LinkItem({ leaf, isEn, currentPage }: NavCommon & { leaf: NavLeaf }) {
       href={leaf.path}
       className={`gl-nav-link${active ? ' header-nav-active' : ''}`}
     >
-      <HugeiconsIcon
-        icon={leaf.icon}
-        size={17}
-        strokeWidth={1.8}
-        className="gl-nav-ico"
-      />
       <span>{isEn ? leaf.label : leaf.zh}</span>
     </a>
   )

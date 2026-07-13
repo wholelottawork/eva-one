@@ -149,6 +149,15 @@ export default function DarkVeil({
       },
     })
 
+    // OGL silently returns from the constructor when the shader fails to link
+    // (it calls `return console.warn(...)`) leaving uniformLocations undefined,
+    // which then crashes Program.use() with "Cannot read properties of undefined
+    // (reading 'forEach')". Bail out here so the solid bg shows instead.
+    if (!program.uniformLocations) {
+      try { gl.getExtension('WEBGL_lose_context')?.loseContext() } catch {}
+      return
+    }
+
     const mesh = new Mesh(gl, { geometry, program })
 
     const resize = () => {

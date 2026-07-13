@@ -557,9 +557,9 @@ export function DecisionCard({
           <PromptSection
             title="User Prompt"
             icon={InboxIcon}
-            accentColor="#60a5fa"
-            accentBg="rgba(96, 165, 250, 0.12)"
-            accentBorder="rgba(96, 165, 250, 0.3)"
+            accentColor="#4ade80"
+            accentBg="rgba(74, 222, 128, 0.12)"
+            accentBorder="rgba(74, 222, 128, 0.3)"
             content={decision.input_prompt}
             expanded={showInputPrompt}
             onToggle={() => setShowInputPrompt(!showInputPrompt)}

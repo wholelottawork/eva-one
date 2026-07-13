@@ -417,7 +417,7 @@ export function EquityChart({ traderId, embedded = false }: EquityChartProps) {
               <defs>
                 <linearGradient id="colorGradient" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="#6f93ff" stopOpacity={1} />
-                  <stop offset="100%" stopColor="#3d6bff" stopOpacity={0.85} />
+                  <stop offset="100%" stopColor="#00c853" stopOpacity={0.85} />
                 </linearGradient>
               </defs>
               <CartesianGrid
@@ -449,7 +449,7 @@ export function EquityChart({ traderId, embedded = false }: EquityChartProps) {
               <Tooltip
                 content={<CustomTooltip />}
                 cursor={{
-                  stroke: '#3d6bff',
+                  stroke: '#00c853',
                   strokeWidth: 1,
                   strokeDasharray: '4 4',
                   strokeOpacity: 0.5,
@@ -473,11 +473,11 @@ export function EquityChart({ traderId, embedded = false }: EquityChartProps) {
                 dataKey="value"
                 stroke="url(#colorGradient)"
                 strokeWidth={3}
-                dot={chartData.length > 50 ? false : { fill: '#3d6bff', r: 3 }}
+                dot={chartData.length > 50 ? false : { fill: '#00c853', r: 3 }}
                 activeDot={{
                   r: 6,
                   fill: '#6f93ff',
-                  stroke: '#3d6bff',
+                  stroke: '#00c853',
                   strokeWidth: 2,
                 }}
                 connectNulls={true}

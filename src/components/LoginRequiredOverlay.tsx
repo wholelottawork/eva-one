@@ -143,7 +143,7 @@ export function LoginRequiredOverlay({
                       size={18}
                       strokeWidth={1.9}
                       className="shrink-0"
-                      style={{ color: '#9fbcff' }}
+                      style={{ color: '#86efac' }}
                     />
                     <span>{benefit}</span>
                   </li>

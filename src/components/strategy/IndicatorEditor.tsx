@@ -390,7 +390,7 @@ export function IndicatorEditor({
                       strokeWidth={1.9}
                       style={{
                         color: config.enable_quant_data
-                          ? '#9fbcff'
+                          ? '#86efac'
                           : 'var(--text-secondary)',
                       }}
                     />
@@ -498,7 +498,7 @@ export function IndicatorEditor({
                       strokeWidth={1.9}
                       style={{
                         color: config.enable_oi_ranking
-                          ? '#9fbcff'
+                          ? '#86efac'
                           : 'var(--text-secondary)',
                       }}
                     />
@@ -607,7 +607,7 @@ export function IndicatorEditor({
                       strokeWidth={1.9}
                       style={{
                         color: config.enable_netflow_ranking
-                          ? '#9fbcff'
+                          ? '#86efac'
                           : 'var(--text-secondary)',
                       }}
                     />
@@ -717,7 +717,7 @@ export function IndicatorEditor({
                       strokeWidth={1.9}
                       style={{
                         color: config.enable_price_ranking
-                          ? '#9fbcff'
+                          ? '#86efac'
                           : 'var(--text-secondary)',
                       }}
                     />
@@ -1000,7 +1000,7 @@ export function IndicatorEditor({
                                   icon={StarIcon}
                                   size={9}
                                   strokeWidth={2.2}
-                                  style={{ color: '#9fbcff' }}
+                                  style={{ color: '#86efac' }}
                                 />
                               )}
                             </button>
@@ -1051,7 +1051,7 @@ export function IndicatorEditor({
               size={14}
               strokeWidth={1.9}
               className="mt-0.5 flex-shrink-0"
-              style={{ color: '#9fbcff' }}
+              style={{ color: '#86efac' }}
             />
             <p
               className="text-[10px]"
@@ -1107,7 +1107,7 @@ export function IndicatorEditor({
                         size={13}
                         strokeWidth={1.9}
                         style={{
-                          color: isOn ? '#9fbcff' : 'var(--text-secondary)',
+                          color: isOn ? '#86efac' : 'var(--text-secondary)',
                         }}
                       />
                       <span
@@ -1213,7 +1213,7 @@ export function IndicatorEditor({
                         size={13}
                         strokeWidth={1.9}
                         style={{
-                          color: isOn ? '#9fbcff' : 'var(--text-secondary)',
+                          color: isOn ? '#86efac' : 'var(--text-secondary)',
                         }}
                       />
                       <span

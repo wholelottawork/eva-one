@@ -95,7 +95,7 @@ export function TraderConfigViewModal({
                   icon={Robot01Icon}
                   size={12}
                   strokeWidth={2}
-                  style={{ color: '#9fbcff' }}
+                  style={{ color: '#86efac' }}
                 />
               </div>
             </div>

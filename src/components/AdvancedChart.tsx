@@ -498,16 +498,16 @@ export function AdvancedChart({
       crosshair: {
         mode: 1,
         vertLine: {
-          color: '#3d6bff',
+          color: '#00c853',
           width: 1,
           style: 2,
-          labelBackgroundColor: '#3d6bff',
+          labelBackgroundColor: '#00c853',
         },
         horzLine: {
-          color: '#3d6bff',
+          color: '#00c853',
           width: 1,
           style: 2,
-          labelBackgroundColor: '#3d6bff',
+          labelBackgroundColor: '#00c853',
         },
       },
       rightPriceScale: {

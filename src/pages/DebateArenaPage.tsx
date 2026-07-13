@@ -158,8 +158,8 @@ const ACT: Record<
     label: 'SHORT',
   },
   hold: {
-    color: 'text-blue-400',
-    bg: 'bg-blue-500/20',
+    color: 'text-green-400',
+    bg: 'bg-green-500/20',
     icon: <HugeiconsIcon icon={MinusSignIcon} size={14} strokeWidth={2} />,
     label: 'HOLD',
   },
@@ -170,14 +170,14 @@ const ACT: Record<
     label: 'WAIT',
   },
   close_long: {
-    color: 'text-blue-400',
-    bg: 'bg-blue-500/20',
+    color: 'text-green-400',
+    bg: 'bg-green-500/20',
     icon: <HugeiconsIcon icon={Cancel01Icon} size={14} strokeWidth={2} />,
     label: 'CLOSE',
   },
   close_short: {
-    color: 'text-blue-400',
-    bg: 'bg-blue-500/20',
+    color: 'text-green-400',
+    bg: 'bg-green-500/20',
     icon: <HugeiconsIcon icon={Cancel01Icon} size={14} strokeWidth={2} />,
     label: 'CLOSE',
   },
@@ -186,8 +186,8 @@ const ACT: Record<
 // Status colors
 const STATUS_COLOR: Record<string, string> = {
   pending: 'bg-gray-500',
-  running: 'bg-blue-500 animate-pulse',
-  voting: 'bg-blue-500 animate-pulse',
+  running: 'bg-green-500 animate-pulse',
+  voting: 'bg-green-500 animate-pulse',
   completed: 'bg-green-500',
   cancelled: 'bg-red-500',
 }
@@ -285,7 +285,7 @@ function MessageCard({
           {/* Reasoning/Analysis Section */}
           {parsed.reasoning && (
             <div className="bg-black/20 rounded-lg p-3">
-              <div className="flex items-center gap-1.5 text-xs text-blue-400 font-medium mb-2">
+              <div className="flex items-center gap-1.5 text-xs text-green-400 font-medium mb-2">
                 <HugeiconsIcon
                   icon={BubbleChatIcon}
                   size={13}
@@ -329,7 +329,7 @@ function MessageCard({
                   <span className="text-gray-500">
                     {t('confidence', language)}
                   </span>
-                  <span className="text-blue-400">
+                  <span className="text-green-400">
                     {msg.decision.confidence}%
                   </span>
                 </div>
@@ -412,7 +412,7 @@ function MessageCard({
                       <span className={da.color}>
                         {da.icon} {da.label}
                       </span>
-                      <span className="text-blue-400">{d.confidence}%</span>
+                      <span className="text-green-400">{d.confidence}%</span>
                       <span className="text-gray-400">
                         {d.leverage || 0}x /{' '}
                         {((d.position_pct || 0) * 100).toFixed(0)}%
@@ -641,7 +641,7 @@ function VoteCard({
     vote.confidence >= 70
       ? 'bg-green-500'
       : vote.confidence >= 50
-        ? 'bg-blue-500'
+        ? 'bg-green-500'
         : 'bg-gray-500'
   return (
     <div className="bg-[var(--surface-secondary)]/40 backdrop-blur-md rounded-xl p-4 debate-vote-card transition-all shadow-lg">
@@ -1626,7 +1626,7 @@ export function DebateArenaPage() {
                   </option>
                 ))}
             </select>
-            <div className="flex items-center gap-1.5 text-xs text-blue-300 bg-[var(--debate-accent-bg)] p-2 rounded mb-3">
+            <div className="flex items-center gap-1.5 text-xs text-green-300 bg-[var(--debate-accent-bg)] p-2 rounded mb-3">
               <HugeiconsIcon
                 icon={AlertCircleIcon}
                 size={14}

@@ -304,7 +304,7 @@ export function MetricTooltip({
               icon={InformationCircleIcon}
               size={14}
               strokeWidth={1.9}
-              style={{ color: '#9fbcff' }}
+              style={{ color: '#86efac' }}
             />
           </span>
           <span
@@ -340,7 +340,7 @@ export function MetricTooltip({
               icon={FunctionIcon}
               size={12}
               strokeWidth={1.9}
-              style={{ color: '#9fbcff' }}
+              style={{ color: '#86efac' }}
             />
             {language === 'zh' ? '计算公式' : 'Formula'}
           </div>
@@ -391,7 +391,7 @@ export function MetricTooltip({
           }
           setShow(!show)
         }}
-        className={`inline-flex items-center justify-center p-0.5 rounded-full transition-all duration-150 hover:bg-[rgba(61,107,255,0.14)] hover:text-[#9fbcff] active:scale-95 ${className}`}
+        className={`inline-flex items-center justify-center p-0.5 rounded-full transition-all duration-150 hover:bg-[rgba(61,107,255,0.14)] hover:text-[#86efac] active:scale-95 ${className}`}
         style={{ color: 'var(--text-secondary)' }}
         aria-label={`Info about ${name}`}
       >

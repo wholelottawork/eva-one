@@ -348,7 +348,7 @@ export function TwoStageKeyModal({
                         icon={Key01Icon}
                         size={16}
                         strokeWidth={1.9}
-                        style={{ color: '#9fbcff' }}
+                        style={{ color: '#86efac' }}
                       />
                       {t('twoStageKey.obfuscationManual', language)}
                     </div>

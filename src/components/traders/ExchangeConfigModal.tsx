@@ -990,8 +990,8 @@ export function ExchangeConfigModal({
                   <div
                     className="p-3 rounded-lg text-xs"
                     style={{
-                      background: 'rgba(59, 130, 246, 0.06)',
-                      border: '1px solid rgba(59, 130, 246, 0.15)',
+                      background: 'rgba(0, 200, 83, 0.06)',
+                      border: '1px solid rgba(0, 200, 83, 0.15)',
                     }}
                   >
                     <div

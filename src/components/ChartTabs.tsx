@@ -65,7 +65,7 @@ const MARKET_CONFIG = {
     defaultSymbol: 'EUR/USD',
     icon: Money03Icon,
     label: { zh: '外汇', en: 'Forex' },
-    color: 'blue',
+    color: 'green',
     hasDropdown: false,
   },
   metals: {

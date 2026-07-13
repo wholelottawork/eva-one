@@ -81,7 +81,7 @@ export const getModelIcon = (modelType: string, props: IconProps = {}) => {
 
 export const getModelColor = (modelType: string): string => {
   const provider = resolveModelProvider(modelType)
-  return (provider && MODEL_COLORS[provider]) || '#60a5fa'
+  return (provider && MODEL_COLORS[provider]) || '#4ade80'
 }
 
 interface ModelAvatarProps {

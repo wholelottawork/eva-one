@@ -53,10 +53,50 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/binance/, ''),
       },
+      '/fapi': {
+        target: 'https://fapi.binance.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/fapi/, ''),
+      },
       '/feargreed': {
         target: 'https://api.alternative.me',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/feargreed/, ''),
+      },
+      '/hl': {
+        target: 'https://api.hyperliquid.xyz',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/hl/, ''),
+      },
+      '/ctnews': {
+        target: 'https://cointelegraph.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/ctnews/, ''),
+      },
+      '/cdnews': {
+        target: 'https://www.coindesk.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/cdnews/, ''),
+      },
+      '/decnews': {
+        target: 'https://decrypt.co',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/decnews/, ''),
+      },
+      '/btcmnews': {
+        target: 'https://bitcoinmagazine.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/btcmnews/, ''),
+      },
+      '/beinnews': {
+        target: 'https://beincrypto.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/beinnews/, ''),
+      },
+      '/btcinews': {
+        target: 'https://bitcoinist.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/btcinews/, ''),
       },
     },
   },

@@ -125,7 +125,7 @@ export function OnboardingDialog({ language }: OnboardingDialogProps) {
                 className="h-1 flex-1 rounded-full transition-all duration-300"
                 style={{
                   background:
-                    i <= stepIndex ? '#3d6bff' : 'rgba(255,255,255,0.08)',
+                    i <= stepIndex ? '#00c853' : 'rgba(255,255,255,0.08)',
                   boxShadow:
                     i === stepIndex ? '0 0 12px rgba(61,107,255,0.45)' : 'none',
                 }}
@@ -163,7 +163,7 @@ export function OnboardingDialog({ language }: OnboardingDialogProps) {
                       style={{ color: 'var(--binance-green)' }}
                     />
                   ) : (
-                    <Shield className="w-7 h-7" style={{ color: '#3d6bff' }} />
+                    <Shield className="w-7 h-7" style={{ color: '#00c853' }} />
                   )}
                 </div>
                 <h3
@@ -248,7 +248,7 @@ export function OnboardingDialog({ language }: OnboardingDialogProps) {
                     <span
                       className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                       style={{
-                        background: '#3d6bff',
+                        background: '#00c853',
                         boxShadow: '0 0 6px rgba(61,107,255,0.8)',
                       }}
                     />
