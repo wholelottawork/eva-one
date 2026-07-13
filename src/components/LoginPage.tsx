@@ -35,7 +35,7 @@ const inputStyle: React.CSSProperties = {
 }
 
 const inputFocusClass =
-  'focus:border-[rgba(61,107,255,0.5)] focus:shadow-[0_0_0_3px_rgba(61,107,255,0.08)]'
+  'focus:border-[rgba(255,255,255,0.2)] focus:shadow-none'
 
 export function LoginPage() {
   const { language } = useLanguage()
@@ -182,7 +182,7 @@ export function LoginPage() {
 
         <div className="relative z-10 flex flex-col h-full p-12">
           <div className="flex items-center gap-3 mb-16">
-            <span className="font-bold text-xl" style={{ color: '#3d6bff' }}>
+            <span className="font-bold text-xl" style={{ color: '#00c853' }}>
               /
             </span>
             <span className="text-white font-bold tracking-[0.22em] text-sm">
@@ -213,7 +213,7 @@ export function LoginPage() {
                   <div
                     className="w-1 h-1 rounded-full flex-shrink-0"
                     style={{
-                      background: '#3d6bff',
+                      background: '#00c853',
                       boxShadow: '0 0 5px rgba(61,107,255,0.9)',
                     }}
                   />
@@ -275,7 +275,7 @@ export function LoginPage() {
                     className="h-0.5 flex-1 rounded-full transition-all duration-500"
                     style={{
                       background:
-                        i <= stepIndex ? '#3d6bff' : 'rgba(255,255,255,0.08)',
+                        i <= stepIndex ? '#00c853' : 'rgba(255,255,255,0.08)',
                     }}
                   />
                 ))}
@@ -288,26 +288,17 @@ export function LoginPage() {
               <div
                 className="relative rounded-2xl overflow-hidden"
                 style={{
-                  background:
-                    'linear-gradient(180deg, #15171f 0%, #0c0d12 100%)',
-                  boxShadow: '0 24px 48px rgba(0,0,0,0.5)',
+                  background: '#0d0d0d',
+                  border: '1px solid #1f1f1f',
                 }}
               >
-                {/* Top accent glow line */}
-                <div
-                  className="h-px w-full"
-                  style={{
-                    background:
-                      'linear-gradient(90deg, transparent 0%, rgba(61,107,255,0.9) 35%, rgba(61,107,255,0.5) 65%, transparent 100%)',
-                  }}
-                />
 
                 <div className="p-7 sm:p-9">
                   {/* Header */}
                   <div className="mb-8">
                     <p
-                      className="text-[10px] font-mono tracking-[0.25em] mb-2.5"
-                      style={{ color: '#3d6bff', opacity: 0.8 }}
+                      className="text-[10px] font-mono font-bold tracking-[0.25em] mb-2.5"
+                      style={{ color: '#00c853', opacity: 0.8 }}
                     >
                       EVA /{' '}
                       {step === 'login'
@@ -316,7 +307,7 @@ export function LoginPage() {
                           ? 'VERIFY'
                           : 'SECURE SETUP'}
                     </p>
-                    <h1 className="text-[1.6rem] font-bold mb-1 tracking-tight gl-metal-shine inline-block">
+                    <h1 className="text-[1.6rem] font-bold mb-1 tracking-tight text-white inline-block">
                       {step === 'login'
                         ? language === 'zh'
                           ? '登录'
@@ -404,7 +395,7 @@ export function LoginPage() {
                             style={{
                               background: 'rgba(61,107,255,0.08)',
                               border: '1px solid rgba(61,107,255,0.2)',
-                              color: '#3d6bff',
+                              color: '#00c853',
                             }}
                           >
                             {otpSecret}
@@ -421,7 +412,7 @@ export function LoginPage() {
                             {copied ? (
                               <Check
                                 className="w-3.5 h-3.5"
-                                style={{ color: '#3d6bff' }}
+                                style={{ color: '#00c853' }}
                               />
                             ) : (
                               <Copy className="w-3.5 h-3.5" />
@@ -458,7 +449,7 @@ export function LoginPage() {
                           <div key={item.n} className="flex gap-3">
                             <span
                               className="text-xs font-mono font-bold shrink-0 mt-0.5"
-                              style={{ color: '#3d6bff', opacity: 0.7 }}
+                              style={{ color: '#00c853', opacity: 0.7 }}
                             >
                               {item.n}
                             </span>
@@ -483,7 +474,7 @@ export function LoginPage() {
                         className="w-full py-3 rounded-xl text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-[0.99]"
                         style={{
                           background:
-                            'linear-gradient(135deg, #3d6bff 0%, #2a54e6 100%)',
+                            'linear-gradient(135deg, #00c853 0%, #15803d 100%)',
                           boxShadow: '0 4px 24px rgba(61,107,255,0.25)',
                         }}
                       >
@@ -535,7 +526,7 @@ export function LoginPage() {
                             <a
                               href="/reset-password"
                               className="text-[11px] font-mono transition-opacity hover:opacity-70"
-                              style={{ color: '#3d6bff' }}
+                              style={{ color: '#00c853' }}
                             >
                               {t('forgotPassword', language)}
                             </a>
@@ -606,7 +597,7 @@ export function LoginPage() {
                         >
                           <Shield
                             className="w-7 h-7"
-                            style={{ color: '#3d6bff' }}
+                            style={{ color: '#00c853' }}
                           />
                         </div>
                         <p
@@ -662,7 +653,7 @@ export function LoginPage() {
                           className="flex-1 py-3 rounded-xl text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-[0.99] disabled:opacity-40 disabled:cursor-not-allowed"
                           style={{
                             background:
-                              'linear-gradient(135deg, #3d6bff 0%, #2a54e6 100%)',
+                              'linear-gradient(135deg, #00c853 0%, #15803d 100%)',
                             boxShadow: '0 4px 24px rgba(61,107,255,0.25)',
                           }}
                         >
@@ -695,7 +686,7 @@ export function LoginPage() {
                     <a
                       href="/register"
                       className="font-medium transition-opacity hover:opacity-70"
-                      style={{ color: '#3d6bff' }}
+                      style={{ color: '#00c853' }}
                     >
                       {language === 'zh' ? '注册' : 'Sign up'}
                     </a>
@@ -748,7 +739,7 @@ function SubmitBtn({
       disabled={loading}
       className="w-full py-3 rounded-xl text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-[0.99] disabled:opacity-40 disabled:cursor-not-allowed"
       style={{
-        background: 'linear-gradient(135deg, #3d6bff 0%, #2a54e6 100%)',
+        background: 'linear-gradient(135deg, #00c853 0%, #15803d 100%)',
         boxShadow: '0 4px 24px rgba(61,107,255,0.25)',
       }}
     >
