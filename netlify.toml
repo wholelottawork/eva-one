@@ -33,6 +33,54 @@
   force = true
 
 [[redirects]]
+  from = "/ctnews/*"
+  to = "https://cointelegraph.com/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/cdnews/*"
+  to = "https://www.coindesk.com/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/decnews/*"
+  to = "https://decrypt.co/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/btcmnews/*"
+  to = "https://bitcoinmagazine.com/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/beinnews/*"
+  to = "https://beincrypto.com/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/btcinews/*"
+  to = "https://bitcoinist.com/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/csnews/*"
+  to = "https://cryptoslate.com/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/bwknews/*"
+  to = "https://blockworks.co/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

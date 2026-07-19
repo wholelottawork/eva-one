@@ -98,6 +98,16 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/btcinews/, ''),
       },
+      '/csnews': {
+        target: 'https://cryptoslate.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/csnews/, ''),
+      },
+      '/bwknews': {
+        target: 'https://blockworks.co',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/bwknews/, ''),
+      },
     },
   },
   build: {
