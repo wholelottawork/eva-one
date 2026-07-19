@@ -2073,7 +2073,7 @@ html:has(.eva-loader) {
 /* Sign up — Bloom-style dark pill, no gradients, no glow */
 .gl-navbar-btn {
   background: #1a1a1a !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid #2a2a2a !important;
   color: #ffffff !important;
   font-weight: 600;
   text-shadow: none;
@@ -2082,7 +2082,7 @@ html:has(.eva-loader) {
 }
 .gl-navbar-btn:hover {
   background: #242424 !important;
-  border-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: #333333 !important;
   box-shadow: none !important;
   transform: none !important;
 }
