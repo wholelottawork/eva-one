@@ -84,11 +84,9 @@ export function TraderConfigViewModal({
               <div
                 className="absolute -bottom-1 -right-1 w-5 h-5 rounded-md flex items-center justify-center"
                 style={{
-                  background:
-                    'linear-gradient(180deg, rgba(61,107,255,0.22), rgba(61,107,255,0.06))',
-                  border: '1px solid rgba(61,107,255,0.30)',
-                  boxShadow:
-                    'inset 0 1px 0 rgba(255,255,255,0.10), 0 0 10px rgba(61,107,255,0.30)',
+                  background: '#1a1a1a',
+                  border: '1px solid #1f1f1f',
+                  boxShadow: 'none',
                 }}
               >
                 <HugeiconsIcon

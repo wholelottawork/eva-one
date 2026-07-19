@@ -236,7 +236,7 @@ function MessageCard({
     parsed.reasoning?.slice(0, 150) || parsed.fullContent.slice(0, 150)
 
   return (
-    <div className="gl-onyx-panel rounded-xl p-3 overflow-hidden hover:bg-[var(--surface-secondary)]/40 transition-all debate-message-card">
+    <div className="gl-onyx-panel rounded-xl p-3 overflow-hidden hover:bg-[#131313] transition-all debate-message-card">
       {/* Header - Always visible */}
       <div
         className="flex items-center gap-2 cursor-pointer"
@@ -644,7 +644,7 @@ function VoteCard({
         ? 'bg-green-500'
         : 'bg-gray-500'
   return (
-    <div className="bg-[var(--surface-secondary)]/40 backdrop-blur-md rounded-xl p-4 debate-vote-card transition-all shadow-lg">
+    <div className="bg-[#0d0d0d] rounded-xl p-4 debate-vote-card transition-all">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <ModelAvatar
@@ -1092,7 +1092,7 @@ export function DebateArenaPage() {
       disableAnimation
     >
       {/* Left - Debate List + Online Traders */}
-      <div className="hidden md:flex w-56 flex-shrink-0 bg-[var(--surface-primary)]/80 backdrop-blur-md border-r debate-panel-border flex-col z-10">
+      <div className="hidden md:flex w-56 flex-shrink-0 bg-[#0d0d0d] border-r debate-panel-border flex-col z-10">
         {/* New Debate Button */}
         <button
           onClick={() => setShowCreate(true)}
@@ -1257,7 +1257,7 @@ export function DebateArenaPage() {
         {detail ? (
           <>
             {/* Header Bar - Compact */}
-            <div className="px-3 py-2 border-b debate-panel-border bg-[var(--surface-primary)]/60 backdrop-blur-md flex items-center gap-3 flex-shrink-0 shadow-sm">
+            <div className="px-3 py-2 border-b debate-panel-border bg-[#0d0d0d] flex items-center gap-3 flex-shrink-0">
               <span
                 className={`w-2 h-2 rounded-full flex-shrink-0 ${STATUS_COLOR[detail.status]}`}
               />
@@ -1407,7 +1407,7 @@ export function DebateArenaPage() {
 
                   {/* Right - Votes */}
                   {votes.length > 0 && (
-                    <div className="w-[420px] flex-shrink-0 overflow-y-auto p-4 bg-[var(--surface-primary)]/30 backdrop-blur-sm dash-scroll">
+                    <div className="w-[420px] flex-shrink-0 overflow-y-auto p-4 bg-[#0d0d0d] dash-scroll">
                       <div className="mb-3 flex items-center gap-2.5">
                         <span className="dash-ico">
                           <HugeiconsIcon
@@ -1455,7 +1455,7 @@ export function DebateArenaPage() {
 
             {/* Consensus Bar - Show when votes exist */}
             {(decision || votes.length > 0) && (
-              <div className="p-3 border-t debate-panel-border debate-consensus-bar backdrop-blur-md flex items-center gap-4 flex-shrink-0">
+              <div className="p-3 border-t debate-panel-border debate-consensus-bar flex items-center gap-4 flex-shrink-0">
                 <div className="flex items-center gap-2">
                   <span className="dash-ico">
                     <HugeiconsIcon
@@ -1598,7 +1598,7 @@ export function DebateArenaPage() {
       {/* Execute Modal */}
       {execId && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-          <div className="bg-[var(--surface-secondary)]/90 backdrop-blur-xl rounded-xl w-full max-w-sm p-6 debate-modal">
+          <div className="bg-[#131313] rounded-xl w-full max-w-sm p-6 debate-modal border border-[#1f1f1f]">
             <h3 className="text-lg font-bold gl-metal-text mb-4 flex items-center gap-2">
               <span className="dash-ico">
                 <HugeiconsIcon icon={FlashIcon} size={16} strokeWidth={1.9} />

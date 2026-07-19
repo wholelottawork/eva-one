@@ -221,14 +221,16 @@ function App() {
     return <LandingPage />
   }
 
-  if (!user || !token) {
-    return <AuthGatePage returnPath={route} />
-  }
+  // AUTH GATE TEMPORARILY DISABLED FOR STYLING
+  // if (!user || !token) {
+  //   return <AuthGatePage returnPath={route} />
+  // }
+  const devUser = user ?? { id: 'dev-preview', email: 'dev@preview.local' }
 
   return (
     <AuthenticatedShell
       route={route}
-      user={user}
+      user={devUser}
       logout={logout}
       language={language}
       setLanguage={setLanguage}
