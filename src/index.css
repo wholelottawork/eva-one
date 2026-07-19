@@ -4019,11 +4019,15 @@ html { -webkit-tap-highlight-color: transparent; }
    Applied after all other rules so !important is not needed.
    ───────────────────────────────────────────────────────────────────────── */
 
-/* Flat panel — replaces gl-metal-panel, gl-onyx-panel, gl-onyx-panel-b, gl-prism-panel */
+/* Flat panel — all gl-*-panel variants */
 .gl-metal-panel,
 .gl-onyx-panel,
 .gl-onyx-panel-b,
-.gl-prism-panel {
+.gl-prism-panel,
+.gl-aurora-panel,
+.gl-liquid-panel,
+.gl-modal-panel,
+.gl-conv-panel {
   background: #0d0d0d !important;
   border: 1px solid #1f1f1f !important;
   box-shadow: none !important;
@@ -4033,7 +4037,15 @@ html { -webkit-tap-highlight-color: transparent; }
 .gl-metal-panel::before, .gl-metal-panel::after,
 .gl-onyx-panel::before, .gl-onyx-panel::after,
 .gl-onyx-panel-b::before, .gl-onyx-panel-b::after,
-.gl-prism-panel::before, .gl-prism-panel::after {
+.gl-prism-panel::before, .gl-prism-panel::after,
+.gl-aurora-panel::before, .gl-aurora-panel::after,
+.gl-liquid-panel::before, .gl-liquid-panel::after,
+.gl-modal-panel::before, .gl-modal-panel::after,
+.gl-conv-panel::before, .gl-conv-panel::after {
+  display: none !important;
+}
+/* Kill the glow border pseudo-element ring */
+.gl-glow-border::before, .gl-glow-border::after {
   display: none !important;
 }
 
