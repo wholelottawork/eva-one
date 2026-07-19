@@ -225,7 +225,7 @@ function App() {
   // if (!user || !token) {
   //   return <AuthGatePage returnPath={route} />
   // }
-  const devUser = user ?? { id: 'dev-preview', email: 'dev@preview.local' }
+  const devUser = user ?? { id: 'dev-preview', email: '' }
 
   return (
     <AuthenticatedShell

@@ -259,9 +259,9 @@ export default function HeaderBar({
                     aria-label={isEn ? 'Account menu' : '账户菜单'}
                   >
                     <span className="gl-user-avatar">
-                      {user.email[0].toUpperCase()}
+                      {(user.email[0] ?? '?').toUpperCase()}
                     </span>
-                    <span className="gl-user-email">{user.email}</span>
+                    {user.email && <span className="gl-user-email">{user.email}</span>}
                     <HugeiconsIcon
                       icon={ArrowDown01Icon}
                       size={15}
@@ -274,13 +274,13 @@ export default function HeaderBar({
                     <div className="gl-user-menu">
                       <div className="gl-user-menu-head">
                         <span className="gl-user-avatar">
-                          {user.email[0].toUpperCase()}
+                          {(user.email[0] ?? '?').toUpperCase()}
                         </span>
                         <div className="min-w-0">
                           <div className="gl-user-menu-label">
                             {t('loggedInAs', language)}
                           </div>
-                          <div className="gl-user-menu-email">{user.email}</div>
+                          {user.email && <div className="gl-user-menu-email">{user.email}</div>}
                         </div>
                       </div>
                       {onLogout && (
@@ -422,14 +422,14 @@ export default function HeaderBar({
                               fontSize: 14,
                             }}
                           >
-                            {user.email[0].toUpperCase()}
+                            {(user.email[0] ?? '?').toUpperCase()}
                           </span>
-                          <span
+                          {user.email && <span
                             className="gl-user-email"
                             style={{ maxWidth: 170, fontSize: 13.5 }}
                           >
                             {user.email}
-                          </span>
+                          </span>}
                         </div>
                       </div>
                       <button
