@@ -334,8 +334,8 @@ export function TraderDashboardPage({
                 <div
                   className="rounded-xl overflow-hidden"
                   style={{
-                    border: '1px solid rgba(61,107,255,0.35)',
-                    boxShadow: '0 0 16px rgba(61,107,255,0.25)',
+                    border: '1px solid #1f1f1f',
+                    boxShadow: 'none',
                     lineHeight: 0,
                   }}
                 >

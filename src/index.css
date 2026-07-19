@@ -4013,4 +4013,84 @@ html { -webkit-tap-highlight-color: transparent; }
 .refresh-btn { font-size: 11px; font-weight: 600; color: #878c8f; background: #0d0d0d; border: 1px solid #1f1f1f; border-radius: 4px; padding: 5px 12px; cursor: pointer; transition: color .12s, border-color .12s; font-family: inherit; }
 .refresh-btn:hover { color: #50d2c1; border-color: #50d2c1; }
 .refresh-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ── BLOOM FLAT OVERRIDES ──────────────────────────────────────────────────
+   Kill all glass/gradient/glow panel and text effects globally.
+   Applied after all other rules so !important is not needed.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Flat panel — replaces gl-metal-panel, gl-onyx-panel, gl-onyx-panel-b, gl-prism-panel */
+.gl-metal-panel,
+.gl-onyx-panel,
+.gl-onyx-panel-b,
+.gl-prism-panel {
+  background: #0d0d0d !important;
+  border: 1px solid #1f1f1f !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.gl-metal-panel::before, .gl-metal-panel::after,
+.gl-onyx-panel::before, .gl-onyx-panel::after,
+.gl-onyx-panel-b::before, .gl-onyx-panel-b::after,
+.gl-prism-panel::before, .gl-prism-panel::after {
+  display: none !important;
+}
+
+/* Flat text — replaces gl-metal-text, gl-metal-shine */
+.gl-metal-text,
+.gl-metal-shine {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
+  filter: none !important;
+  animation: none !important;
+}
+
+/* Flat button — replaces gl-accent-glow-btn */
+.gl-accent-glow-btn {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+.gl-accent-glow-btn::before,
+.gl-accent-glow-btn::after { display: none !important; }
+.gl-accent-glow-btn:hover {
+  background: rgba(255,255,255,0.10) !important;
+  box-shadow: none !important;
+}
+
+/* Remove backdrop blurs used on debate/strategy panels */
+[class*="backdrop-blur"] {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Kill blue inline borders that still sneak through */
+.debate-panel-border { border-color: #1f1f1f !important; }
+.debate-message-card { background: #0d0d0d !important; border-color: #1f1f1f !important; }
+.debate-vote-card    { background: #0d0d0d !important; box-shadow: none !important; }
+.debate-modal        { background: #0d0d0d !important; border: 1px solid #1f1f1f !important; }
+.debate-consensus-bar { background: #0d0d0d !important; }
 @keyframes pulse { 0%, 100% { opacity: .4; } 50% { opacity: .7; } }
+
+/* Override semi-transparent CSS variables — makes ALL panels/surfaces solid */
+:root {
+  --surface-primary: #0d0d0d;
+  --surface-secondary: #0d0d0d;
+  --surface-tertiary: #131313;
+  --panel-border: #1f1f1f;
+  --panel-border-hover: #2a2a2a;
+  --header-bg: #0d0d0d;
+}
+
+/* gl-panel also needs the same flat treatment */
+.gl-panel {
+  background: #131313 !important;
+  border: 1px solid #1f1f1f !important;
+  box-shadow: none !important;
+}
+.gl-panel::before, .gl-panel::after { display: none !important; }

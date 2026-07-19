@@ -1291,8 +1291,8 @@ export function AITradersPage({ onTraderSelect }: AITradersPageProps) {
                       <div
                         className="rounded-lg overflow-hidden"
                         style={{
-                          border: '1px solid rgba(61,107,255,0.35)',
-                          boxShadow: '0 0 14px rgba(61,107,255,0.22)',
+                          border: '1px solid #1f1f1f',
+                          boxShadow: 'none',
                           lineHeight: 0,
                         }}
                       >
