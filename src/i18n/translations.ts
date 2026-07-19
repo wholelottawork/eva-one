@@ -1471,7 +1471,7 @@ export const translations = {
     },
 
     landingPage: {
-      tagline: 'built on Base · multi-chain · real-time · open source',
+      tagline: 'built on Hood · multi-chain · real-time · open source',
       commandsTitle: 'Commands',
       contacts: 'Contacts',
       send: 'Send',
